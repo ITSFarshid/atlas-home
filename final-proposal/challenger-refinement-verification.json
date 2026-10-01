@@ -1,0 +1,92 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Fixed driving state across demos/reset",
+    "Removed Home fan and defrost",
+    "Clock and components invariant at both widths",
+    "Temperature adjustment",
+    "Driving queue restriction retained",
+    "Fit preview"
+  ],
+  "records": [
+    {
+      "width": 1920,
+      "map": [
+        824,
+        544
+      ],
+      "clock": [
+        208,
+        48
+      ],
+      "cards": [
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ]
+      ],
+      "climate": [
+        [
+          448,
+          64
+        ],
+        [
+          448,
+          64
+        ]
+      ]
+    },
+    {
+      "width": 2880,
+      "map": [
+        824,
+        544
+      ],
+      "clock": [
+        208,
+        48
+      ],
+      "cards": [
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ]
+      ],
+      "climate": [
+        [
+          448,
+          64
+        ],
+        [
+          448,
+          64
+        ]
+      ]
+    }
+  ],
+  "errors": []
+}

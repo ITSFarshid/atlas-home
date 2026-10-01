@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATLAS — Home display comparison</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#282828;color:#ededed;font-family:'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+main{padding:32px;display:flex;flex-direction:column;align-items:flex-start;gap:32px}
+section{margin:0;max-width:100%}
+.preview-controls{display:flex;align-items:center;gap:12px;font-size:13px;color:#b0b0b0}
+.preview-controls select{height:40px;padding:0 36px 0 12px;border:1px solid #555;border-radius:8px;background:#333;color:#ededed;font:inherit;color-scheme:dark;cursor:pointer}
+.preview-controls select:focus-visible{outline:2px solid #ddd;outline-offset:3px}
+[hidden]{display:none!important}
+h2{font-size:14px;font-weight:600;line-height:20px;margin:0 0 12px;color:#ededed;letter-spacing:.2px;font-variant-numeric:tabular-nums}
+h2 span{margin-left:20px;font-size:12px;font-weight:400;color:#b0b0b0;letter-spacing:0}
+.display-frame{position:relative;overflow:hidden;border-radius:12px;background:#080808;box-shadow:0 0 0 1px #ffffff14,0 8px 24px #00000026}
+iframe{display:block;border:0;position:absolute;left:0;top:0;transform-origin:top left;height:720px}
+</style>
+</head>
+<body>
+<main aria-label="Home dashboard comparison at a shared scale">
+<div class="preview-controls"><label for="display-view">View</label><select id="display-view"><option value="both">Both displays</option><option value="1920">1920 only</option><option value="2880">2880 only</option></select></div>
+<section data-profile="1920" aria-labelledby="normal-label">
+<h2 id="normal-label">1920 × 720</h2>
+<div class="display-frame" data-width="1920"><iframe width="1920" height="720" title="1920 pixel Home dashboard — Driving" src="prototype-screen.html?width=1920"></iframe></div>
+</section>
+<section data-profile="2880" aria-labelledby="extended-label">
+<h2 id="extended-label">2880 × 720<span>+960 px · passenger-side expansion →</span></h2>
+<div class="display-frame" data-width="2880"><iframe width="2880" height="720" title="2880 pixel Home dashboard — Driving" src="prototype-screen.html?width=2880"></iframe></div>
+</section>
+</main>
+<script src="prototype-comparison.js"></script>
+</body>
+</html>

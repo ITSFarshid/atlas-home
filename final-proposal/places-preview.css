@@ -1,0 +1,63 @@
+.screen [data-detail="place-preview"] .place-name{font-size:32px;line-height:1.15;margin:20px 0 10px;letter-spacing:-.5px;padding-right:25px}
+.place-address{font-size:18px;line-height:1.45;color:var(--secondary);margin:0}
+.place-estimate{display:flex;gap:40px;margin-top:24px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.place-estimate span{display:block;font-size:16px;color:var(--secondary)}
+.place-estimate strong{display:block;font-size:28px;font-weight:500;margin-top:3px}
+.place-facts{display:grid;gap:18px;margin-top:22px}
+.place-facts>div{display:flex;gap:14px;align-items:flex-start}
+.place-facts .icon,.parking-symbol{width:24px;height:24px;flex:none;color:var(--secondary)}
+.parking-symbol{font-size:18px;font-weight:500;border:1px solid var(--secondary);border-radius:4px;text-align:center;line-height:22px}
+.place-facts h3{font-size:18px;margin:0 0 4px}
+.place-facts p{font-size:18px;line-height:1.4;margin:0;color:var(--secondary)}
+.screen .place-actions{display:flex;flex-direction:column;gap:9px;align-items:stretch;border:0}
+.screen .place-actions button{height:52px;min-height:52px;justify-content:center;background:var(--accent);color:var(--on-accent)}
+.screen .place-actions button:disabled{background:var(--raised);color:var(--secondary)}
+.place-actions>span{font-size:15px;line-height:1.35;color:var(--secondary)}
+.place-empty{margin-top:64px}.place-empty>.icon{width:40px;height:40px;color:var(--accent)}
+.place-empty h2{font-size:30px;margin-top:24px}.place-empty p{font-size:20px;line-height:1.5;color:var(--secondary)}
+.place-empty>span{display:block;margin-top:28px;color:var(--secondary);font-size:18px}
+
+/* Final alignment pass: fixed geometry, consistent internal spacing. */
+.screen .icon{display:block;flex-shrink:0}
+.screen button{line-height:1.2}
+.screen .native-rail button .icon{width:24px;height:24px}
+.screen .native-rail .dock-shortcut{gap:8px}
+.screen .widget-heading{display:flex;align-items:center;justify-content:space-between;line-height:24px}
+.screen .widget-heading>.icon{width:24px;height:24px}
+.screen .compact-card .phone-settings{margin-right:0;width:40px;height:40px;padding:8px}
+.screen .compact-playback .icon{width:24px;height:24px}
+.screen .compact-link{padding:0 20px;gap:12px}
+.screen .compact-contacts button{flex:1;min-width:0;width:auto;padding:0 16px;gap:12px}
+.screen .compact-contacts .icon{width:20px;height:20px}
+.screen .widget-foot{left:28px;right:28px;bottom:24px;height:56px;padding:0}
+.screen .widget-foot .widget-link{padding:0 20px;gap:12px}
+.screen .widget-link>.icon{width:24px;height:24px}
+.screen .saved-home-list{display:grid;gap:8px}
+.screen .saved-home-list .list-row{padding:12px;gap:12px;height:88px}
+.screen .saved-home-list .row-art{width:40px;height:40px}
+.screen .saved-home-list .row-body strong{font-size:23px;line-height:28px}
+.screen .saved-home-list .row-body span{line-height:24px;margin-top:4px}
+.screen .saved-home-list .list-row>.icon{width:20px;height:20px}
+.screen .places-availability{font-size:17px;line-height:24px;gap:12px}
+.screen .places-availability>.icon{width:20px;height:20px}
+.screen .detail-close{right:20px;top:16px;width:48px;height:48px;display:grid;place-items:center;padding:12px}
+.screen .detail-close>.icon{width:24px;height:24px}
+.screen .detail-panel>.eyebrow{line-height:24px;max-width:320px;padding-right:24px}
+.screen .detail-panel .small-action{padding:0 20px;gap:12px}
+.screen .place-estimate{gap:32px;margin-top:24px;padding:16px 0}
+.screen .place-estimate>div{flex:1}
+.screen .place-estimate strong{line-height:36px;margin-top:4px;font-variant-numeric:tabular-nums}
+.screen .place-facts{gap:20px;margin-top:20px}
+.screen .place-facts>div{gap:12px}
+.screen .place-facts .icon,.screen .parking-symbol{margin-top:2px}
+.screen .parking-symbol{display:grid;place-items:center;line-height:1}
+.screen .place-actions{gap:12px;padding-top:0}
+.screen .place-actions button{padding:0 20px}
+.screen .place-actions>span{line-height:20px}
+.screen .journey-impact{padding:12px 16px;gap:12px}
+.screen .journey-impact>span{min-width:0}
+.screen .journey-impact>.icon{width:24px;height:24px}
+.screen .journey-impact>.icon:last-child{width:20px;height:20px}
+.screen .map-search,.screen .map-tools button{display:grid;place-items:center;padding:0}
+.screen .map-trip .small-action{display:flex;align-items:center;justify-content:center;padding:0 16px;gap:12px}
+.screen .comfort button{display:flex;align-items:center;justify-content:center;gap:12px;padding:0 20px}

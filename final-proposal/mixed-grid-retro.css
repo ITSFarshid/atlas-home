@@ -1,0 +1,207 @@
+/* ATLAS / Retro. iOS 6 era skin over the Polar mixed grid.
+   Values are sampled from the CarPlay-era reference at 1.875x (1024 -> 1920).
+   Styling only: every component keeps its native bounds on 1920 and 2880. */
+
+/* 1. Screen: smooth grey vignette with fine grain, darker toward the edges. */
+.screen.atlas.retro{
+  --text:#FFFFFF;--secondary:#9A9BA0;--disabled:#6E6F74;--line:#26272A;--control-line:#1E1F21;
+  --accent:#407FF0;--accent-soft:#407FF033;--on-accent:#FFFFFF;--route:#407FF0;--hover:#5A5B5F;--raised:#46474B;--surface:#3A3B3F;--canvas:#3A3B3F;
+  --map:#EEEFF1;--park:#B8DBBD;--building:#E3E4E6;
+  --ink:#24262A;--ink-soft:#6B6E75;--ink-detail:#385487;
+  --well:linear-gradient(#4E4F51 0,#525355 12%,#57585A 55%,#505153 100%);
+  --panel:linear-gradient(#4E4F51 0,#545557 6%,#4A4B4F 18%,#3C3D41 42%,#343539 68%,#2A2B2D 100%);
+  --grey-button:linear-gradient(#C4C5CA 0,#B0B3B8 18%,#9CA0A7 40%,#878C95 62%,#727682 100%);
+  --dark-button:linear-gradient(#525355 0,#464749 42%,#3A3B3D 100%);
+  --silver-bar:linear-gradient(#F4F5F7 0,#FBFBFC 4%,#EEF0F2 22%,#DADCE2 48%,#C6C8D0 72%,#AEB1C0 100%);
+  --paper:linear-gradient(#FFFEF9 0,#F2F3F5 22%,#E6E7EB 48%,#D6D7DF 74%,#C8CDD0 100%);
+  --sign:linear-gradient(#5AD4AE 0,#45C9A0 42%,#2DB589 48%,#18A978 72%,#0A9665 100%);
+  --selected-blue:linear-gradient(#1A9AF7,#058CF5 10%,#015EE6);
+  --disc-blue:linear-gradient(#5A96F5,#2E6FE2 48%,#1A54C8);
+  --gloss:linear-gradient(180deg,rgba(255,255,255,.55) 0,rgba(255,255,255,.22) 46%,rgba(255,255,255,0) 48%);
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;
+  text-shadow:0 -1px 0 rgba(0,0,0,.4);
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    linear-gradient(90deg,rgba(0,0,0,.42) 0,rgba(0,0,0,.28) 96px,rgba(0,0,0,0) 128px),
+    radial-gradient(90% 110% at 50% 0,#7A7B80 0,#66676B 30%,#535458 55%,#3E3F43 80%,#303133 100%);
+}
+.screen.atlas.retro button{font-family:inherit}
+.screen.atlas.retro h2,.screen.atlas.retro h3{font-weight:400;letter-spacing:0}
+.screen.atlas.retro button:active:not(:disabled){filter:brightness(.85)}
+.screen.atlas.retro button:focus-visible{outline:3px solid #7FB2FF;outline-offset:2px}
+
+/* 2. Wells and panels: sunken title bars, dark panels lit from the top. */
+.screen.atlas.retro .map-heading,.screen.atlas.retro .collection-title,.screen.atlas.retro .climate{background:var(--well);border:1px solid rgba(0,0,0,.28);border-radius:10px;box-shadow:inset 0 2px 2px -1px rgba(0,0,0,.35),0 1px 0 rgba(255,255,255,.16)}
+.screen.atlas.retro .map-heading,.screen.atlas.retro .collection-title{padding:0 18px;font-size:22px;font-weight:400;color:#EEEFF1}
+.screen.atlas.retro .map-heading .destination-title{font-size:22px;font-weight:400;color:#EEEFF1}
+.screen.atlas.retro .nav-status span{font-size:20px;color:#C9CACC}
+.screen.atlas.retro .collection-title:has(.carousel-nav){padding:0 4px}
+.screen.atlas.retro .carousel-nav button{width:52px;height:38px;border-radius:7px;background:var(--dark-button);border:1px solid #2A2A2C;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.1);color:#B9BABC}
+.screen.atlas.retro .carousel-nav button:disabled{opacity:.4}
+.screen.atlas.retro .panel{background:var(--panel);border:1px solid #26272A;border-radius:11px;box-shadow:0 0 0 1px rgba(255,255,255,.07),inset 0 1px 0 rgba(255,255,255,.08)}
+.screen.atlas.retro .widget-heading{font-size:17px;font-weight:400;color:#9A9BA0}
+.screen.atlas.retro .icon{filter:drop-shadow(0 -1px 0 rgba(0,0,0,.4))}
+
+/* 3. Map: thick dark bezel, silver bar inside, iOS 6 cartography. */
+.screen.atlas.retro .map{border-radius:11px;background:var(--map);box-shadow:0 1px 0 rgba(255,255,255,.14)}
+.screen.atlas.retro .map::after{content:'';position:absolute;inset:0;z-index:4;pointer-events:none;padding:26px;border-radius:11px;background:linear-gradient(#4A4B4F 0,#3E3F43 12%,#333439 35%,#2E2F33 70%,#292A2D 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(0,0,0,.4);-webkit-mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.screen.atlas.retro .map .cartography{outline:1px solid #242528;outline-offset:-27px}
+.screen.atlas.retro .map::before{content:'';position:absolute;right:26px;bottom:26px;z-index:3;width:68px;height:68px;pointer-events:none;background:
+  linear-gradient(315deg,transparent 0 46%,#FFFFFF 46.5%,#F7F7F9 54%,#D0D1D5 62%,transparent 62.5%),
+  linear-gradient(315deg,#3A3B40 0 45.5%,transparent 46%);
+  filter:drop-shadow(-3px -2px 4px rgba(0,0,0,.35))}
+.screen.atlas.retro .cartography text{text-shadow:none;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.screen.atlas.retro .cartography .land{fill:#F6F7F9}
+.screen.atlas.retro .cartography .park{fill:var(--park)}
+.screen.atlas.retro .cartography .building{fill:#E2E3E5;opacity:1;stroke:#D0D1D3;stroke-width:1}
+.screen.atlas.retro .cartography .minor{stroke:#FFFFFF;stroke-width:7;filter:drop-shadow(0 0 1px #C4C5C8)}
+.screen.atlas.retro .cartography .collector-edge{stroke:#D0D1D3;stroke-width:14}
+.screen.atlas.retro .cartography .collectors{stroke:#FFFFFF;stroke-width:11}
+.screen.atlas.retro .cartography .road-edge{stroke:#D6C99D;stroke-width:30}
+.screen.atlas.retro .cartography .roads{stroke:#F8E6A3;stroke-width:24;opacity:1}
+.screen.atlas.retro .cartography .route-casing{stroke:#3B74C5;stroke-width:36;filter:drop-shadow(0 0 2.5px #FFFFFF) drop-shadow(0 0 1.5px #EEFFFF)}
+.screen.atlas.retro .cartography .route-line{stroke:var(--route);stroke-width:30}
+.screen.atlas.retro .cartography text{fill:#55575B;stroke:#FFFFFF;stroke-width:4px;font-size:18px;font-weight:700}
+.screen.atlas.retro .cartography .current-road-label{fill:#55575B;stroke:#F7E5A0}
+.screen.atlas.retro .cartography .district{fill:#8C8E93;font-weight:400}
+.screen.atlas.retro .cartography .park-label{fill:#4F7A55;stroke:var(--park);font-weight:400}
+.screen.atlas.retro .cartography .position-base{r:35px;fill:url(#retro-disc);stroke:#FFFFFF;stroke-width:5;filter:drop-shadow(0 3px 4px rgba(0,0,0,.45))}
+.screen.atlas.retro .cartography .position-arrow{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:1;transform:scale(1.1)}
+
+/* Silver bar: the map's own navigation bar, inside the bezel. */
+.screen.atlas.retro .map-trip{z-index:5;top:26px;left:26px;bottom:auto;width:772px;height:62px;padding:0 10px;justify-content:center;gap:0;background:var(--silver-bar);border:0;border-top:1px solid #7A7B7F;border-bottom:1px solid #9A9CA8;border-radius:0;box-shadow:0 2px 4px rgba(0,0,0,.28);text-shadow:0 1px 0 rgba(255,255,255,.8)}
+.screen.atlas.retro .map-trip>div:first-child{display:flex;align-items:baseline;gap:12px}
+.screen.atlas.retro .map-trip strong{font-size:28px;font-weight:700;color:#4A4C51;line-height:1}
+.screen.atlas.retro .map-trip span{margin:0;font-size:18px;font-weight:400;color:#5C5E64}
+.screen.atlas.retro .map-trip .small-action,.screen.atlas.retro .map-trip.is-staged .stage-actions button{position:absolute;right:10px;top:6px;height:48px;padding:0 14px;background:var(--grey-button);border:1px solid #5A5C62;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 0 rgba(255,255,255,.55);color:#FFFFFF;font-size:19px;font-weight:700;text-shadow:0 -1px 0 rgba(0,0,0,.5)}
+.screen.atlas.retro .map-trip .small-action .icon{color:#FFFFFF}
+.screen.atlas.retro .map-trip .small-action:hover:not(:disabled),.screen.atlas.retro .map-trip.is-staged .stage-actions button:hover:not(:disabled){background:var(--grey-button);filter:brightness(1.06)}
+.screen.atlas.retro .map-trip.is-staged{justify-content:flex-start;padding:0 10px 0 18px}
+.screen.atlas.retro .map-trip.is-staged>div:first-child{flex:1;min-width:0}
+.screen.atlas.retro .map-trip.is-staged strong,.screen.atlas.retro .map-trip.is-staged span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.screen.atlas.retro .map-trip.is-staged strong{font-size:24px}
+.screen.atlas.retro .map-trip.is-staged .stage-actions{position:static}
+.screen.atlas.retro .map-trip.is-staged .stage-actions button{position:static;height:48px}
+.screen.atlas.retro .map-trip.is-staged .stage-actions button:first-child{background:linear-gradient(#7FB0F5,#4D8BEA 48%,#2F6FD6 50%,#2A64C2);border-color:#1D4E9E}
+.screen.atlas.retro .map-trip.is-staged button:disabled{opacity:.45}
+
+/* Green highway sign for the maneuver. */
+.screen.atlas.retro .map-guidance{z-index:5;top:104px;right:44px;left:auto;min-width:280px;background:var(--sign);border:1px solid #CEF1EA;border-radius:8px;box-shadow:inset 0 0 0 1px #57B197,0 3px 6px rgba(0,0,0,.3);text-shadow:0 -1px 0 rgba(0,0,0,.28)}
+.screen.atlas.retro .map-guidance>.icon{color:#FFFFFF;background:transparent;filter:none}
+.screen.atlas.retro .map-guidance strong{font-size:40px;font-weight:700;color:#FFFFFF}
+.screen.atlas.retro .map-guidance small{font-size:22px;color:#FFFFFF}
+.screen.atlas.retro .map-guidance span{font-size:20px;font-weight:400;color:#FFFFFF}
+
+/* Grey control stack on the left, matching the reference. */
+.screen.atlas.retro .map-search,.screen.atlas.retro .map-tools button{z-index:5;width:54px;height:50px;background:linear-gradient(#A8ABB1,#9399A1 40%,#7A818A 70%,#6A7078);border:1px solid #5E6369;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 2px rgba(0,0,0,.25);color:#FFFFFF}
+.screen.atlas.retro .map-search{top:104px;left:44px;right:auto;border-radius:8px 8px 0 0}
+.screen.atlas.retro .map .map-tools{z-index:5;top:154px;left:44px;right:auto;bottom:auto}
+.screen.atlas.retro .map-tools button{border-radius:0 0 8px 8px;border-top:1px solid #D4DBE1;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 2px rgba(0,0,0,.25)}
+.screen.atlas.retro .map-search .icon,.screen.atlas.retro .map-tools .icon{color:#FFFFFF;stroke-width:2.2;filter:drop-shadow(0 -1px 0 rgba(0,0,0,.4))}
+.screen.atlas.retro .map-search:hover:not(:disabled),.screen.atlas.retro .map-tools button:hover:not(:disabled){background:linear-gradient(#A8ABB1,#9399A1 40%,#7A818A 70%,#6A7078);filter:brightness(1.06)}
+
+/* 4. Media: reference stack — Cover Flow, title, transport, slider — inside 448×256. */
+.screen.atlas.retro .widget-media:after{display:none;background:none}
+.screen.atlas.retro .widget-media.compact-card::after{display:block;content:'';position:absolute;left:calc(24px + 42% - 13px);bottom:0;z-index:3;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 50% 32%,#FFFFFF 0,#F4F5F6 28%,#C8CACC 68%,#9A9B9E 100%);border:1px solid #6A6B6E;box-shadow:0 2px 4px rgba(0,0,0,.55),inset 0 1px 0 #FFFFFF}
+.screen.atlas.retro .widget-media .widget-heading{position:absolute;left:14px;top:12px;z-index:3;height:36px;padding:0 14px 0 22px;display:flex;align-items:center;background:var(--dark-button);border:1px solid #2E2F31;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.08);color:#C4C5C8;font-size:16px;font-weight:700;clip-path:polygon(14px 0,100% 0,100% 100%,14px 100%,0 50%)}
+.screen.atlas.retro .widget-media .widget-heading .icon{display:none}
+.screen.atlas.retro .widget-media .widget-heading span{font-size:16px;color:#C4C5C8;text-shadow:0 -1px 0 rgba(0,0,0,.5)}
+.screen.atlas.retro .compact-art{inset:auto;top:36px;left:50%;width:108px;height:108px;margin-left:-54px;z-index:1}
+.screen.atlas.retro .compact-art .cover{border-radius:4px;filter:none;object-position:65% 30%;box-shadow:0 4px 12px rgba(0,0,0,.65),0 1px 0 rgba(255,255,255,.12)}
+.screen.atlas.retro .compact-art::before,.screen.atlas.retro .compact-art::after{content:'';position:absolute;top:16px;z-index:-1;width:74px;height:74px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.55);opacity:.92}
+.screen.atlas.retro .compact-art::before{left:-48px;background:radial-gradient(circle at 62% 38%,#F2F6FB 0 12%,#B7D0EE 24%,transparent 46%),linear-gradient(160deg,#8FB6E4,#3D6FB5 55%,#1C3A70)}
+.screen.atlas.retro .compact-art::after{right:-48px;background:radial-gradient(50% 30% at 50% 100%,#2A241E 0 60%,transparent 62%),linear-gradient(#C9B89B,#8E7757 55%,#4E4031)}
+.screen.atlas.retro .compact-track{top:148px;left:24px;right:24px;text-align:center;z-index:2}
+.screen.atlas.retro .compact-track h2{font-size:22px;font-weight:700;color:#F0F1F4;text-shadow:0 -1px 0 rgba(0,0,0,.55);margin:0 0 1px;line-height:1.15}
+.screen.atlas.retro .compact-track p{font-size:14px;color:#8B8C91;line-height:1.2}
+.screen.atlas.retro .compact-playback{left:0;right:0;bottom:28px;height:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #1A1B1D;border-bottom:1px solid #1A1B1D;background:linear-gradient(#38393B,#2E2F31 50%,#262729);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.screen.atlas.retro .compact-playback button,.screen.atlas.retro .compact-playback button.primary{width:auto;height:44px;border:0;border-radius:0;background:transparent;color:#D8D9DB}
+.screen.atlas.retro .compact-playback button+button{border-left:1px solid #1E1F21;box-shadow:inset 1px 0 0 rgba(255,255,255,.08)}
+.screen.atlas.retro .compact-playback button:hover:not(:disabled),.screen.atlas.retro .compact-playback button.primary:hover:not(:disabled){background:rgba(255,255,255,.05)}
+.screen.atlas.retro .compact-playback .icon{width:32px;height:32px;fill:url(#retro-metal);stroke:url(#retro-metal);stroke-width:3;filter:drop-shadow(0 -1px 0 rgba(0,0,0,.65)) drop-shadow(0 1px 0 rgba(255,255,255,.18))}
+.screen.atlas.retro .compact-playback [data-action="prev"] path{d:path("M11 6 1 12l10 6zM22 6 12 12l10 6z");stroke:none}
+.screen.atlas.retro .compact-playback [data-action="next"] path{d:path("M13 6l10 6-10 6zM2 6l10 6-10 6z");stroke:none}
+.screen.atlas.retro .compact-playback [data-action="play"][aria-pressed="false"] path{stroke:none}
+.screen.atlas.retro .widget-media.compact-card::before{content:'';position:absolute;left:24px;right:24px;bottom:8px;height:10px;z-index:2;border:1px solid #1A1B1D;border-radius:5px;background:linear-gradient(#3E5F9E,#5A88D0 45%,#7AA8E0) 0 0/42% 100% no-repeat,linear-gradient(#B8B9BD,#E8E9EB 50%,#F4F5F7);box-shadow:inset 0 1px 1px rgba(0,0,0,.35),0 1px 0 rgba(255,255,255,.06)}
+.screen.atlas.retro .compact-link{top:12px;right:14px;bottom:auto;width:40px;height:36px;padding:0;gap:0;justify-content:center;background:var(--dark-button);border:1px solid #2E2F31;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.08);color:transparent;font-size:0}
+.screen.atlas.retro .compact-link .icon{width:22px;height:22px;color:#B8B9BD;stroke:#B8B9BD;stroke-width:2.2;fill:none}
+.screen.atlas.retro .compact-link .icon path{d:path("M5 7h14M5 12h14M5 17h10");stroke-linecap:round}
+.screen.atlas.retro .compact-link:hover:not(:disabled),.screen.atlas.retro .phone-settings:hover:not(:disabled),.screen.atlas.retro .widget-link:hover:not(:disabled){background:var(--dark-button);filter:brightness(1.12)}
+
+/* 5. Rail: illustrated app tiles without labels, Home button at the foot. */
+.screen.atlas.retro .native-rail{background:transparent;border:0;box-shadow:none;padding:16px 8px}
+.screen.atlas.retro .dock-status{height:64px}
+.screen.atlas.retro .dock-status time{font-size:24px;font-weight:400;color:#D8D9DB}
+.screen.atlas.retro .dock-date{font-size:15px;color:#9A9BA0}
+.screen.atlas.retro .dock-shortcuts{flex:1;margin-top:8px;padding-top:12px;gap:14px;border:0}
+.screen.atlas.retro .native-rail .dock-shortcut{width:72px;height:72px;min-height:72px;padding:0;background:transparent;color:transparent;font-size:0;text-shadow:none}
+.screen.atlas.retro .native-rail .dock-shortcut span{display:none}
+.screen.atlas.retro .native-rail .dock-shortcut .icon{position:relative;z-index:1;width:34px;height:34px;filter:none}
+.screen.atlas.retro .native-rail .dock-shortcut::before{content:'';position:absolute;left:0;top:0;width:72px;height:72px;border-radius:15px;box-shadow:0 0 0 1px rgba(0,0,0,.5),0 3px 4px rgba(0,0,0,.45)}
+.screen.atlas.retro .native-rail [data-action="tool-navigation"]::before{background:var(--gloss),linear-gradient(#2F63B4,#1E4A96) 68% 18%/22px 26px no-repeat,linear-gradient(115deg,transparent 36%,#2F7ED0 36% 44%,transparent 44%),linear-gradient(transparent 28%,#E8C44A 28% 29%,#F7D867 29% 38%,#E8C44A 38% 39%,transparent 39%),linear-gradient(90deg,transparent 18%,#FFFFFF 18% 22%,transparent 22%,#FFFFFF 48% 52%,transparent 52%),linear-gradient(#E8E4DA,#D2CEC2 45%,#B8B3A7)}
+.screen.atlas.retro .native-rail [data-action="tool-navigation"] .icon{display:none}
+.screen.atlas.retro .native-rail [data-action="tool-media"]::before{background:var(--gloss),linear-gradient(#F6D49A 0,#EFB56A 32%,#E08A2E 48%,#C56A14 78%,#D87A22)}
+.screen.atlas.retro .native-rail [data-action="tool-media"] .icon{width:40px;height:40px;stroke:#5E1A0D;stroke-width:2.8;filter:drop-shadow(0 1px 0 rgba(255,255,255,.35))}
+.screen.atlas.retro .native-rail [data-action="tool-phone"]::before{background:var(--gloss),repeating-linear-gradient(135deg,rgba(255,255,255,.14) 0 1.5px,transparent 1.5px 5px),linear-gradient(#7EE07E 0,#42C842 44%,#14A814 50%,#0A9A0C 82%,#12B012)}
+.screen.atlas.retro .native-rail [data-action="tool-phone"] .icon{width:38px;height:38px;fill:#FFFFFF;stroke:#FFFFFF;stroke-width:1;filter:drop-shadow(0 -1px 0 rgba(0,0,0,.3))}
+.screen.atlas.retro .native-rail [data-action="tool-vehicle"]::before{background:var(--gloss),radial-gradient(circle at 38% 42%,#4A4C50 0 5px,#C8CAD0 5.5px 8px,#5A5C60 8.5px 9.5px,transparent 10px),radial-gradient(circle at 62% 58%,#4A4C50 0 6px,#C8CAD0 6.5px 10px,#5A5C60 10.5px 11.5px,transparent 12px),radial-gradient(circle at 50% 48%,#3E4044 0 4px,#B0B2B6 4.5px 7px,#525458 7.5px 8.5px,transparent 9px),repeating-conic-gradient(from 8deg at 38% 42%,#D0D2D6 0 12deg,transparent 12deg 30deg),repeating-conic-gradient(from 0deg at 62% 58%,#D0D2D6 0 10deg,transparent 10deg 28deg),linear-gradient(#9A9CA1,#5E6065)}
+.screen.atlas.retro .native-rail [data-action="tool-vehicle"] .icon{display:none}
+.screen.atlas.retro .native-rail [data-action="tool-phone"]::after{content:'2';position:absolute;top:-4px;right:-2px;z-index:2;min-width:26px;height:26px;padding:0 6px;border:2px solid #FFFFFF;border-radius:13px;background:radial-gradient(120% 60% at 50% 0,rgba(255,255,255,.5) 0 45%,transparent 50%),linear-gradient(#E9656D,#DA2327);box-shadow:0 2px 3px rgba(0,0,0,.5);color:#FFFFFF;font-size:15px;font-weight:700;line-height:22px;text-align:center;text-shadow:0 -1px 0 rgba(0,0,0,.3)}
+.screen.atlas.retro .native-rail .dock-home{order:9;margin-top:auto}
+.screen.atlas.retro .native-rail [data-action="home"]::before{border-radius:50%;background:radial-gradient(circle at 50% 40%,#2B2C2E 0,#27282A 60%,#212224 100%);box-shadow:0 0 0 2px #3B3C3E,inset 0 2px 3px rgba(0,0,0,.6)}
+.screen.atlas.retro .native-rail [data-action="home"] .icon{width:30px;height:30px;color:#B2B3B5;stroke-width:1.6}
+.screen.atlas.retro .native-rail [data-action="home"] .icon path{d:path("M8 5h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z")}
+.screen.atlas.retro .native-rail button[aria-current=page]{background:transparent}
+.screen.atlas.retro .native-rail button[aria-current=page]::before{box-shadow:0 0 0 1px rgba(0,0,0,.5),0 0 0 3px rgba(255,255,255,.75),0 2px 8px rgba(0,0,0,.45)}
+.screen.atlas.retro .native-rail [data-action="home"][aria-current=page]::before{box-shadow:0 0 0 2px #3B3C3E,inset 0 2px 3px rgba(0,0,0,.6)}
+.screen.atlas.retro .native-rail button:hover:not(:disabled){background:transparent;filter:brightness(1.08)}
+
+/* 6. Phone: paper buttons like the "Find nearby" card. */
+.screen.atlas.retro .compact-device{color:#9A9BA0}
+.screen.atlas.retro .phone-settings,.screen.atlas.retro .widget-link{background:var(--dark-button);border:1px solid #2A2A2C;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.1);color:#C9CACC;font-weight:700}
+.screen.atlas.retro .compact-contacts button,.screen.atlas.retro .connect-phone,.screen.atlas.retro .compact-call button{background:var(--paper);border:1px solid #9A9DA3;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.3);color:var(--ink);font-weight:700;text-shadow:0 1px 0 rgba(255,255,255,.75)}
+.screen.atlas.retro .compact-contacts button:hover:not(:disabled){background:var(--paper);filter:brightness(1.03)}
+.screen.atlas.retro .compact-contacts .contact-initial{border:2px solid #B9DEF1;border-radius:50%;background:var(--disc-blue);color:#FFFFFF;text-shadow:0 -1px 0 rgba(0,0,0,.3)}
+.screen.atlas.retro .compact-contacts .icon{color:#12A61D;filter:drop-shadow(0 1px 0 #FFFFFF)}
+.screen.atlas.retro .compact-call button{color:#C8231F}
+
+/* 7. Trip, Places, Queue: iOS 6 grouped tables inside the dark cards. */
+.screen.atlas.retro .home-widget:not(.compact-card) h2{font-size:28px;color:#EEEFF1}
+.screen.atlas.retro .places-intro{color:#9A9BA0}
+.screen.atlas.retro .trip-facts,.screen.atlas.retro .saved-home-list,.screen.atlas.retro .queue-list{overflow:hidden;background:#F7F7F7;border:1px solid #ABABAB;border-radius:10px;box-shadow:0 1px 0 rgba(255,255,255,.1);text-shadow:0 1px 0 #FFFFFF}
+.screen.atlas.retro .trip-fact{padding:11px 14px;border-top:1px solid #E0E0E0}
+.screen.atlas.retro .trip-fact:first-child{border-top:0}
+.screen.atlas.retro .trip-fact:has(.trip-stop){grid-template-columns:1fr auto auto}
+.screen.atlas.retro .trip-fact:has(.trip-stop) strong{grid-column:2;grid-row:1}
+.screen.atlas.retro .trip-fact span{font-size:17px;font-weight:700;color:var(--ink)}
+.screen.atlas.retro .trip-fact strong{font-size:19px;font-weight:400;color:var(--ink-detail)}
+.screen.atlas.retro .trip-fact small{font-size:14px;color:var(--ink-soft)}
+.screen.atlas.retro .trip-stop{grid-column:3;height:38px;background:var(--grey-button);border:1px solid #5F6166;border-radius:7px;box-shadow:inset 0 1px 0 rgba(255,255,255,.3);color:#FFFFFF;font-weight:700;text-shadow:0 -1px 0 rgba(0,0,0,.45)}
+.screen.atlas.retro .trip-stop:disabled{opacity:.5}
+.screen.atlas.retro .list-row{height:72px;padding:0 14px;gap:14px;border:0;border-top:1px solid #E0E0E0;border-radius:0;background:transparent;box-shadow:none;color:var(--ink)}
+.screen.atlas.retro .list-row:first-child{border-top:0}
+.screen.atlas.retro .list-row .row-body strong{font-size:20px;font-weight:700;color:var(--ink)}
+.screen.atlas.retro .list-row .row-body span{font-size:15px;color:var(--ink-soft)}
+.screen.atlas.retro .list-row .row-index{font-weight:700;color:var(--ink-soft)}
+.screen.atlas.retro .list-row .row-art{width:36px;height:36px;color:#C8312B;filter:none}
+.screen.atlas.retro .list-row:not(.chosen)>.icon:last-child{width:30px;height:30px;padding:7px;border:2px solid #FFFFFF;border-radius:50%;background:var(--disc-blue);box-shadow:0 1px 2px rgba(0,0,0,.4);color:#FFFFFF;stroke-width:3.5;filter:none}
+.screen.atlas.retro .list-row:disabled>.icon:last-child{opacity:.35}
+.screen.atlas.retro .list-row:hover:not(:disabled){background:#EEF3FB}
+.screen.atlas.retro .list-row.chosen{background:var(--selected-blue);text-shadow:0 -1px 0 rgba(0,0,0,.3)}
+.screen.atlas.retro .list-row.chosen .row-body strong,.screen.atlas.retro .list-row.chosen .row-body span,.screen.atlas.retro .list-row.chosen .row-index,.screen.atlas.retro .list-row.chosen .icon{color:#FFFFFF}
+.screen.atlas.retro .places-availability{color:#9A9BA0}
+
+/* 8. Climate well and comfort strip. */
+.screen.atlas.retro .climate{padding:0 12px}
+.screen.atlas.retro .climate .who,.screen.atlas.retro .climate .auto{color:#9A9BA0}
+.screen.atlas.retro .climate button{width:48px;height:44px;border-radius:7px;background:var(--dark-button);border:1px solid #2A2A2C;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.1);color:#D8D9DB;font-size:26px;font-weight:400}
+.screen.atlas.retro .climate .value{font-size:28px;font-weight:400;color:#EEEFF1}
+.screen.atlas.retro .comfort{gap:0;padding:0;border:1px solid #1E1F21;border-radius:10px;overflow:hidden;background:linear-gradient(90deg,#353638,#2E2F31 50%,#262729);box-shadow:0 1px 0 rgba(255,255,255,.12)}
+.screen.atlas.retro .comfort button{height:62px;border:0;border-radius:0;background:transparent;color:#D8D9DB;font-weight:400}
+.screen.atlas.retro .comfort button+button{border-left:1px solid #232426;box-shadow:inset 1px 0 0 rgba(255,255,255,.07)}
+.screen.atlas.retro .comfort button.on{background:linear-gradient(#4C8CF0,#2E6FE2 50%,#1D5BD0);color:#FFFFFF}
+.screen.atlas.retro .comfort button:hover:not(:disabled){background:rgba(255,255,255,.05)}
+.screen.atlas.retro .comfort button.on:hover:not(:disabled){background:linear-gradient(#4C8CF0,#2E6FE2 50%,#1D5BD0)}
+
+/* HUD toast. */
+.screen.atlas.retro .toast{background:rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.18);border-radius:12px;color:#FFFFFF}

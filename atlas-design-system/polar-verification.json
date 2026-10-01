@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "contrast": [
+    {
+      "fg": "text",
+      "bg": "surface",
+      "ratio": 16.3
+    },
+    {
+      "fg": "secondary",
+      "bg": "surface",
+      "ratio": 9.54
+    },
+    {
+      "fg": "on-accent",
+      "bg": "accent",
+      "ratio": 9.06
+    },
+    {
+      "fg": "accent",
+      "bg": "canvas",
+      "ratio": 9.53
+    },
+    {
+      "fg": "warning",
+      "bg": "warning-soft",
+      "ratio": 10.2
+    },
+    {
+      "fg": "control-line",
+      "bg": "raised",
+      "ratio": 3.34
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Two native display sizes",
+    "16px card corners",
+    "Shared orange tokens",
+    "All gallery images loaded",
+    "Switch and keyboard tabs",
+    "Selected token contrast pairs"
+  ]
+}

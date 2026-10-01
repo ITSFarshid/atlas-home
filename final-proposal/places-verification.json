@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "errors": [],
+  "checks": [
+    "Both sizes",
+    "Preview never commits a route",
+    "Driving route lock",
+    "Parked route confirmation",
+    "Narrow return to list",
+    "Wide list retention",
+    "Existing Queue accessible",
+    "Empty state",
+    "Preview bounds and content containment"
+  ]
+}

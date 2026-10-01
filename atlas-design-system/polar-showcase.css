@@ -1,0 +1,16 @@
+/* Documentation chrome mirrors the current flat, rectilinear component language. */
+.side{background:var(--canvas)}
+.hero h1{letter-spacing:-2px;font-weight:400}.hero h1 span{color:var(--text)}
+.hero-preview,.swatch,.semantic,.surface-demo,.shape,.specimen,.icon-cell,.hmi-rules article,.pill{border-radius:var(--radius-card);box-shadow:none}
+.hero-preview{background:var(--surface);border:0;padding:32px}
+.hero-notes h3{font-size:28px;font-weight:400}.hero-notes p{font-size:17px}
+.hero-meta .pill{border:0;background:var(--raised)}
+.side-foot i{border-radius:0}.section-head .section-no{color:var(--accent)}
+.surface-demo{border:1px solid var(--line)}
+.surface-demo strong{font-weight:400}
+.specimen{background:var(--surface);border:0}
+.type-sample{letter-spacing:-.4px!important}
+.notes,.note-box{color:var(--secondary)}
+#applied-home img{border-radius:0!important}
+.a-media .a-media-copy{position:relative;z-index:1}
+@media(max-width:800px){.hero h1{letter-spacing:-1px}}

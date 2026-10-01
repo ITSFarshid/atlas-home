@@ -1,0 +1,160 @@
+/* ATLAS / Polar. Shared component recipes and application adapter.
+   Inspired by Polestar 2 reference imagery, not official Polestar source. */
+.atlas{font-weight:400;letter-spacing:0}
+.atlas .icon,.screen .icon{stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.a-card,.atlas .a-nav{background:var(--surface);border:0;border-radius:var(--radius-card);box-shadow:none}
+.a-card--raised{background:var(--raised)}
+.a-label,.widget-heading{font-weight:400;color:var(--secondary);letter-spacing:0}
+.a-title,.a-metric,.a-media-copy h3,.a-maneuver h3,.a-journey h3{font-weight:400;letter-spacing:-.4px}
+.a-button,.a-field,.a-chip,.a-alert,.a-row,.a-tabs,.a-tabs button{border-radius:var(--radius-control);box-shadow:none}
+.a-button{border-color:transparent;background:var(--raised);font-weight:400!important}
+.a-button--primary{background:var(--accent);color:var(--on-accent)}
+.a-button--quiet{background:transparent;color:var(--text)}
+.a-button--selected,.a-button[aria-pressed=true]:not(.a-button--primary){border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.a-button.is-pressed{box-shadow:none;background:var(--accent-pressed);color:var(--on-accent)}
+.a-button:disabled{background:var(--surface);border-color:var(--line)}
+.a-tabs{background:transparent;border:0;padding:0;border-bottom:1px solid var(--line);gap:0}
+.a-tabs button{border-bottom:3px solid transparent;background:transparent!important;font-weight:400}
+.a-tabs button[aria-selected=true]{color:var(--accent);border-bottom-color:var(--accent)}
+.a-field{background:var(--surface);border:0;border-bottom:1px solid var(--control-line)}
+.a-switch-track{border-radius:var(--radius-control);background:var(--raised);border-color:var(--control-line)}
+.a-switch-knob{border-radius:var(--radius-small);background:var(--text)}
+.a-switch[aria-checked=true] .a-switch-knob{background:var(--on-accent)}
+.a-alert{background:var(--warning-soft);border:0;border-left:3px solid var(--warning)}
+.a-alert--danger{background:var(--danger-soft);border-left-color:var(--danger)}
+.a-row{border-bottom-color:var(--line)}.a-row .a-row-art{border-radius:var(--radius-small);background:var(--raised)}
+.a-media{background:var(--surface)}.a-media:after{background:linear-gradient(90deg,#101010F5,#10101066),linear-gradient(0deg,#101010D9,transparent 80%)}
+.a-media .a-art{filter:grayscale(.35) brightness(.85)}
+.a-media .a-transport .a-button--primary{background:var(--accent);color:var(--on-accent)}
+.a-transport button,.a-climate .a-button{border-radius:var(--radius-control)}
+.atlas .a-nav{border:0;border-radius:var(--radius-card);background:#111212}
+.atlas .a-nav button{border-radius:var(--radius-control);font-size:16px;font-weight:400}
+.atlas .a-nav button[aria-current=page]{background:#262623;color:var(--text)}
+.atlas .a-nav button[aria-current=page]:before{border-radius:2px;background:var(--accent)}
+.atlas .a-nav button[aria-current=page] .icon{color:var(--accent)}
+
+/* Fixed-canvas dashboard adapter. One Polar surface language; bounds unchanged. */
+.screen.atlas{
+  --map:#222323;--water:#181D1F;--park:#292F29;--road:#747976;--minor:#373C39;--building:#303231;
+  background:var(--canvas);border-radius:0;font-weight:400
+}
+.screen .panel,.screen .map{border:0;border-radius:var(--radius-card);box-shadow:inset 0 0 0 1px #FFFFFF08;background:var(--surface)}
+.screen .map{background:var(--map);box-shadow:none}
+.screen h2,.screen h3,.screen .map-guidance strong,.screen .map-trip strong{font-weight:400;letter-spacing:-.4px}
+.screen .widget-heading{font-size:18px;font-weight:400;color:var(--secondary)}
+.screen .map-heading .destination-title,.screen .collection-title{font-size:24px;font-weight:400;color:var(--text)}
+.screen button{font-weight:400}
+.screen button:focus-visible{outline-offset:-3px}
+
+/* Native rail — CarPlay-dock structure, Polar materials. 88×544 unchanged. */
+.screen .native-rail{padding:16px 8px 12px;background:transparent;border:0;border-radius:0;box-shadow:none;display:flex;flex-direction:column;align-items:center}
+.screen .dock-status{height:64px;width:72px;border:0;text-align:center;flex:none}
+.screen .dock-status time{font-size:24px;line-height:28px;font-weight:500;letter-spacing:-.6px;color:var(--text)}
+.screen .dock-date{font-size:16px;line-height:22px;color:var(--secondary);margin-top:4px;font-variant-numeric:tabular-nums}
+.screen .dock-shortcuts{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:28px;padding-top:0;border:0;flex:1}
+.screen .native-rail button{border-radius:var(--radius-control);font-weight:400;color:var(--secondary);border:0;background:transparent}
+.screen .native-rail .dock-shortcut{width:64px;height:64px;min-height:64px;gap:0;padding:0;font-size:0;display:grid;place-items:center}
+.screen .native-rail .dock-home{margin-top:auto;width:56px;height:56px;min-height:56px;border:1px solid var(--control-line);border-radius:var(--radius-control);color:var(--text)}
+.screen .native-rail .dock-home .icon{width:22px;height:22px}
+.screen .native-rail button .icon{width:28px;height:28px;stroke-width:1.8}
+.screen .native-rail button[aria-current=page]{background:var(--accent-soft);color:var(--text)}
+.screen .native-rail button[aria-current=page] .icon{color:var(--accent)}
+.screen .native-rail button[aria-current=page]:before{display:none}
+.screen .native-rail .dock-home[aria-current=page]{background:var(--raised);border-color:var(--accent);color:var(--accent)}
+.screen .native-rail .dock-home[aria-current=page] .icon{color:var(--accent)}
+.screen .native-rail button:hover:not(:disabled){background:var(--raised);color:var(--text)}
+.screen .native-rail .dock-home:hover:not(:disabled){background:var(--raised);border-color:var(--text);color:var(--text)}
+
+/* Summary / detail */
+.screen .summary-switch{border:0;gap:8px}
+.screen .summary-switch button{border:0;border-radius:var(--radius-control);padding:0 20px;background:transparent;color:var(--secondary);font-weight:400}
+.screen .summary-switch button.selected{background:var(--accent-soft);color:var(--accent)}
+.screen .detail-panel{background:var(--surface);border-top:0;padding-top:28px}
+.screen .detail-panel:before{content:'';position:absolute;left:28px;top:0;width:40px;height:3px;background:var(--accent);border-radius:0 0 3px 3px}
+.screen .detail-close{border:0;border-radius:var(--radius-control);background:var(--raised)}
+.screen .detail-panel .tool-grid button{border:0;border-radius:var(--radius-control);background:var(--raised)}
+.screen .detail-panel .tool-grid button.on{background:var(--accent-soft);color:var(--accent);box-shadow:inset 0 -3px var(--accent)}
+
+/* Compact media: contained cover, no full-bleed wash */
+.screen .compact-card.widget-media{background:var(--surface)}
+.screen .compact-art{inset:auto;top:64px;right:24px;width:104px;height:104px;z-index:0}
+.screen .compact-art .cover{width:100%;height:100%;object-fit:cover;object-position:65% 30%;border-radius:var(--radius-control);filter:grayscale(.25) brightness(.85)}
+.screen .compact-card.widget-media:after{display:none;background:none}
+.screen .compact-track{top:64px;left:24px;right:144px}
+.screen .compact-track h2{font-size:28px;font-weight:400;letter-spacing:-.4px}
+.screen .compact-track p{font-size:18px}
+.screen .compact-playback button{border-radius:var(--radius-control);background:transparent}
+.screen .compact-playback button.primary{background:var(--accent);color:var(--on-accent)}
+.screen .compact-playback button.primary:hover:not(:disabled){background:var(--accent-hover)}
+.screen .compact-playback button.primary:active:not(:disabled){background:var(--accent-pressed)}
+.screen .compact-link,.screen .widget-link,.screen .small-action{border:0;border-radius:var(--radius-control);background:var(--raised);color:var(--text);font-weight:400}
+.screen .compact-link:hover,.screen .widget-link:hover,.screen .small-action:hover{background:var(--hover)}
+.screen .widget-foot{border-top:1px solid var(--line)}
+.screen .compact-card .phone-settings{border-radius:var(--radius-control)}
+.screen .compact-device{color:var(--secondary);font-size:18px}
+.screen .compact-contacts button{border:0;border-radius:var(--radius-control);background:var(--raised);font-weight:400;padding:0 12px}
+.screen .compact-contacts .contact-initial{background:transparent;border:1px solid var(--control-line);border-radius:var(--radius-small);font-size:18px}
+.screen .compact-contacts .icon{color:var(--secondary)}
+.screen .compact-call button,.screen .connect-phone{border-radius:var(--radius-control)}
+
+/* Lists and journey */
+.screen .journey-destination h2,.screen .journey-next h3{font-size:32px}
+.screen .journey-impact{border:0;border-left:3px solid var(--warning);border-radius:var(--radius-control);background:var(--warning-soft);color:var(--warning);box-shadow:inset 0 0 0 1px #F1D06B12}
+.screen .journey-impact.is-clear{border-left-color:var(--success);background:var(--success-soft);color:var(--success)}
+.screen .saved-home-list .row-art{border-radius:var(--radius-small);color:var(--secondary)}
+.screen .list-row{border-radius:var(--radius-control);border-bottom-color:var(--line)}
+.screen .list-row.chosen{background:var(--accent-soft);border-color:transparent;box-shadow:inset 3px 0 var(--accent)}
+.screen .row-body strong{font-weight:400}
+
+/* Climate / comfort */
+.screen .climate button{border:0;border-radius:var(--radius-control);color:var(--accent);background:transparent}
+.screen .comfort button{border:0;border-radius:var(--radius-control);background:var(--surface);font-weight:400}
+.screen .comfort button.on{background:var(--accent);color:var(--on-accent)}
+.screen .toast{border-radius:var(--radius-control)}
+
+/* Map: neutral cartography, one orange accent family */
+.screen .map .cartography{width:824px;height:544px}
+.screen .cartography .building{fill:var(--building);opacity:.38}
+.screen .cartography .minor{stroke:var(--minor);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.screen .cartography .collector-edge,.screen .cartography .collectors{fill:none;stroke-linejoin:round;stroke-linecap:round}
+.screen .cartography .collector-edge{stroke:#1B1D1C;stroke-width:8}
+.screen .cartography .collectors{stroke:#4D5250;stroke-width:3}
+.screen .cartography .road-edge{stroke:#171A18;stroke-width:13}
+.screen .cartography .roads{stroke:var(--road);stroke-width:7}
+.screen .cartography .shoreline{fill:none;stroke:#373D3C;stroke-width:1.5}
+.screen .cartography .route-casing{stroke:#24211C;stroke-width:12}
+.screen .cartography .route-line{stroke:var(--route);stroke-width:7}
+.screen .cartography .route-highlight{fill:none;stroke:#FFD7A6;stroke-width:1.5;stroke-opacity:.6;stroke-linecap:round;stroke-linejoin:round}
+.screen .cartography text{font-size:18px;font-weight:400;fill:#C3CBC7;stroke:var(--map);stroke-width:5px;letter-spacing:0}
+.screen .cartography .district{font-size:17px;font-weight:400;fill:#919992;letter-spacing:0}
+.screen .cartography .water-label{fill:#909A9C;stroke:var(--water);font-size:16px;letter-spacing:.5px}
+.screen .cartography .park-label{font-size:16px;fill:#A2ADA1;stroke:var(--park)}
+.screen .cartography .current-road-label{font-size:18px;fill:#D4D9D5}
+.screen .cartography .destination-marker>path{fill:var(--accent);stroke:#252321;stroke-width:3;stroke-linejoin:round}
+.screen .cartography .destination-marker>circle{fill:#252321}
+.screen .cartography .position-halo{fill:#F5A0440D;stroke:#F5A04425;stroke-width:1}
+.screen .cartography .position-base{fill:#24211D;stroke:var(--accent);stroke-width:2}
+.screen .cartography .position-arrow{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:2;stroke-linejoin:round}
+.screen .cartography .stop-marker circle{fill:#252321;stroke:var(--accent);stroke-width:3}
+.screen .cartography .stop-marker text{fill:#FFFFFF;stroke:none;font-size:16px;font-weight:500}
+.screen .cartography>circle{fill:var(--route)}
+
+/* Map overlays */
+.screen .map-guidance,.screen .map-trip{background:#171818;border:1px solid #3D4140;border-radius:var(--radius-card);box-shadow:0 4px 12px #00000025}
+.screen .map-guidance{gap:20px;padding:16px 20px}
+.screen .map-guidance>.icon{width:56px;height:56px;padding:4px;border-radius:var(--radius-control);background:transparent;color:var(--accent)}
+.screen .map-guidance.turn-left>.icon{transform:scaleX(-1)}
+.screen .map-guidance strong{font-size:42px;line-height:1.05;letter-spacing:-1px;font-weight:400}
+.screen .map-guidance small{font-size:22px;margin-left:3px;color:var(--secondary)}
+.screen .map-guidance span{font-size:20px;color:#D8DBDA;margin-top:7px}
+.screen .map-trip{width:400px;height:80px;padding:10px 16px 10px 20px;gap:16px}
+.screen .map-trip strong{font-size:26px;font-weight:400}
+.screen .map-trip span{font-size:18px;color:var(--secondary);margin-top:4px}
+.screen .map-trip .small-action{padding:0 14px;gap:8px;font-size:18px;background:#2C2E2D;color:var(--text);border:1px solid #4E5350;border-radius:var(--radius-control)}
+.screen .map-trip .small-action:hover:not(:disabled){background:#383C39}
+.screen .map-search,.screen .map-tools button{background:#202221;border:1px solid #606763;border-radius:var(--radius-control);box-shadow:0 3px 12px #00000024}
+.screen .map-search:hover:not(:disabled),.screen .map-tools button:hover:not(:disabled){background:#383C39}
+.screen .map-trip.is-staged .stage-actions button{background:var(--raised);color:var(--text);border:0}
+.screen .map-trip.is-staged .stage-actions button:first-child{background:var(--accent);color:var(--on-accent)}
+.screen .map-trip.is-staged .stage-actions button:first-child:hover:not(:disabled){background:var(--accent-hover)}
+.screen .map-trip.is-staged .stage-actions button:hover:not(:disabled):not(:first-child){background:var(--hover)}

@@ -1,0 +1,85 @@
+{
+  "result": "PASS",
+  "configs": [
+    {
+      "w": 1366,
+      "h": 768,
+      "width": 1920,
+      "left": 24,
+      "right": 1342,
+      "top": 113,
+      "bottom": 607.25,
+      "nativeWidth": 1920,
+      "nativeHeight": 720,
+      "cardWidth": 448
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "width": 2880,
+      "left": 24,
+      "right": 1342,
+      "top": 113,
+      "bottom": 442.5,
+      "nativeWidth": 2880,
+      "nativeHeight": 720,
+      "cardWidth": 448
+    },
+    {
+      "w": 1000,
+      "h": 700,
+      "width": 1920,
+      "left": 24,
+      "right": 976,
+      "top": 164,
+      "bottom": 521,
+      "nativeWidth": 1920,
+      "nativeHeight": 720,
+      "cardWidth": 448
+    },
+    {
+      "w": 1000,
+      "h": 700,
+      "width": 2880,
+      "left": 24,
+      "right": 976,
+      "top": 164,
+      "bottom": 402,
+      "nativeWidth": 2880,
+      "nativeHeight": 720,
+      "cardWidth": 448
+    },
+    {
+      "w": 600,
+      "h": 800,
+      "width": 1920,
+      "left": 24,
+      "right": 576,
+      "top": 220,
+      "bottom": 427,
+      "nativeWidth": 1920,
+      "nativeHeight": 720,
+      "cardWidth": 448
+    },
+    {
+      "w": 600,
+      "h": 800,
+      "width": 2880,
+      "left": 24,
+      "right": 576,
+      "top": 220,
+      "bottom": 358,
+      "nativeWidth": 2880,
+      "nativeHeight": 720,
+      "cardWidth": 448
+    }
+  ],
+  "checks": [
+    "Fit at six display/browser combinations",
+    "Native component dimensions unchanged",
+    "Scaled dialog size and viewport bounds",
+    "Scaled mouse drag and arrow browsing",
+    "Actual pixels toggle"
+  ],
+  "errors": []
+}

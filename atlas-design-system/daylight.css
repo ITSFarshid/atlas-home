@@ -1,0 +1,86 @@
+/* Tesla-inspired daylight alternative; independent tokens, shared HMI geometry. */
+:root{color-scheme:light}
+.presenter select,.presenter button{color-scheme:light}
+.screen.atlas{--map:#E3E6E8;--water:#C5DCE7;--park:#D1DECD;--road:#FFFFFF;--minor:#F6F7F8;--building:#D7DCDD;background:var(--canvas)}
+.screen .panel,.atlas .a-card{background:var(--surface);box-shadow:inset 0 0 0 1px #202B3510,0 2px 6px #202B3506}
+.screen .native-rail{background:#FFFFFF;box-shadow:inset 0 0 0 1px #202B3510}
+.screen .dock-status{border-color:var(--line)}
+.screen .dock-date,.screen .native-rail .dock-shortcut{color:var(--secondary)}
+.screen .dock-shortcuts{border-color:var(--line)}
+.screen .native-rail button:hover:not(:disabled){background:var(--raised);color:var(--text)}
+.screen .native-rail button[aria-current=page]{background:var(--accent-soft);color:var(--accent)}
+.screen h2,.screen h3{font-weight:500}
+.screen .widget-heading{color:var(--secondary);font-weight:500}
+.screen .compact-contacts button{background:#F0F2F4;color:var(--text)}
+.screen .compact-contacts .contact-initial{background:#E1E6EC;border:0;color:#39434E}
+.screen .compact-contacts .icon{color:#3B4652}
+.screen .summary-switch button.selected{background:#E2EAF6}
+.screen .journey-impact{background:var(--warning-soft);color:var(--warning);box-shadow:inset 0 0 0 1px #86600918}
+.screen .journey-impact.is-clear{background:var(--success-soft);color:var(--success)}
+.screen .compact-card.widget-media{background:#FFFFFF}
+.screen .widget-media:after{display:none}
+.screen .compact-art{inset:auto;top:66px;right:24px;width:96px;height:96px;z-index:0}
+.screen .compact-art .cover{border-radius:10px;filter:none;object-position:65% 30%}
+.screen .compact-track{right:136px}
+.screen .compact-track h2{font-size:30px;font-weight:500;color:var(--text)}
+.screen .compact-track p{color:var(--secondary)}
+.screen .compact-playback button{color:var(--text)}
+.screen .compact-playback button.primary{background:#20252B;color:#FFFFFF}
+.screen .compact-playback button.primary:hover:not(:disabled){background:#39434E}
+.screen .compact-playback button.primary:active:not(:disabled){background:#0F1318}
+.screen .compact-link,.screen .widget-link,.screen .small-action{background:#ECEFF2;color:var(--text)}
+.screen .compact-link:hover:not(:disabled),.screen .widget-link:hover:not(:disabled),.screen .small-action:hover:not(:disabled){background:#DCE2E8}
+.screen .climate button{color:var(--text)}
+.screen .comfort button{background:#FFFFFF;color:var(--text)}
+.screen .comfort button.on{background:var(--accent);color:#FFFFFF}
+.screen .detail-panel .tool-grid button{background:var(--raised)}
+.screen .detail-panel .tool-grid button.on{background:var(--accent-soft);color:var(--accent)}
+.screen .detail-close{background:var(--raised);color:var(--text)}
+.screen .list-row.chosen{background:var(--accent-soft)}
+.screen .toast{background:#FFFFFF;color:var(--text);border-color:var(--control-line);box-shadow:0 4px 20px #202B3520}
+
+/* Daylight cartography uses a different luminance hierarchy, not an inversion. */
+.screen .cartography .building{fill:var(--building);opacity:.9}
+.screen .cartography .minor{stroke:var(--minor);stroke-width:2}
+.screen .cartography .road-edge{stroke:#C5CBCF;stroke-width:11}
+.screen .cartography .roads{stroke:#FFFFFF;stroke-width:7;opacity:1}
+.screen .cartography .shoreline{stroke:#ACC8D4}
+.screen .cartography text{fill:#4B5660;stroke:var(--map);stroke-width:5}
+.screen .cartography .district{fill:#56625D;font-weight:500}
+.screen .cartography .water-label{fill:#496B7C;stroke:var(--water)}
+.screen .cartography .route-casing{stroke:#FFFFFF;stroke-width:14}
+.screen .cartography .route-line{stroke:var(--route);stroke-width:8}
+.screen .cartography .route-highlight{stroke:#8DB5FF;stroke-width:2;stroke-opacity:.6}
+.screen .cartography .destination-marker>path{fill:#20252B;stroke:#FFFFFF;stroke-width:3}
+.screen .cartography .destination-marker>circle{fill:#FFFFFF}
+.screen .cartography .position-halo{fill:#2463D914;stroke:#2463D92E}
+.screen .cartography .position-base{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3;filter:drop-shadow(0 2px 4px #1F365033)}
+.screen .cartography .position-arrow{fill:var(--route);stroke:var(--route)}
+.screen .cartography .stop-marker circle{fill:#FFFFFF;stroke:var(--route)}
+.screen .cartography .stop-marker text{fill:var(--route)}
+.screen .map-guidance,.screen .map-trip{background:#FFFFFF;border:1px solid #D0D6DC;box-shadow:0 4px 14px #25334018}
+.screen .map-guidance>.icon{background:#EAF0F9;color:#245CC0}
+.screen .map-guidance strong,.screen .map-trip strong{color:var(--text)}
+.screen .map-guidance span{color:#343E48}
+.screen .map-guidance small,.screen .map-trip span{color:var(--secondary)}
+.screen .map-trip .small-action{background:#ECEFF2;border:0;color:var(--text)}
+.screen .map-trip .small-action:hover:not(:disabled){background:#DCE2E8}
+.screen .map-search,.screen .map-tools button{background:#FFFFFF;border:1px solid #8B959F;box-shadow:0 2px 8px #25334014;color:var(--text)}
+.screen .map-search:hover:not(:disabled),.screen .map-tools button:hover:not(:disabled){background:#E9EEF4}
+
+/* Shared design-system specimens. The photographic player keeps white text. */
+.atlas .a-media{--text:#FFFFFF;--secondary:#D8DDE2;--on-accent:#FFFFFF;color:#FFFFFF}
+.atlas .a-media h3,.atlas .a-media>.a-label,.atlas .a-media .icon{color:#FFFFFF}
+.atlas .a-media .a-button--primary{background:#20252B;color:#FFFFFF}
+.atlas .a-media:after{background:linear-gradient(90deg,#101820EF,#10182066),linear-gradient(0deg,#101820C9,transparent 80%)}
+.atlas .a-nav{background:#FFFFFF;border-right:0}
+.a-button--primary{background:var(--accent);color:#FFFFFF}
+.a-alert{background:var(--warning-soft);color:var(--warning)}
+.a-alert--danger{background:var(--danger-soft);color:var(--danger)}
+.a-switch[aria-checked=true] .a-switch-knob{background:#FFFFFF}
+.side,.hero-preview{background:#FFFFFF}.hero h1 span{color:var(--text)}
+.screen .cartography .collectors{stroke:#FAFBFC}
+.screen .cartography .collector-edge{stroke:#CDD2D6}
+.screen .cartography .current-road-label{fill:#3A4650}
+.screen .cartography .park-label{fill:#53674F}
+.hero-meta .pill{background:var(--raised)}

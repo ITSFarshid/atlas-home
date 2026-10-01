@@ -1,0 +1,154 @@
+{
+  "name": "ATLAS / Daylight HMI",
+  "status": "Tesla-inspired light alternative; shared fixed-size mixed grid",
+  "color": {
+    "canvas": "#F2F3F5",
+    "surface": "#FFFFFF",
+    "raised": "#ECEFF2",
+    "hover": "#DCE2E8",
+    "text": "#20252B",
+    "secondary": "#59636E",
+    "disabled": "#74808B",
+    "line": "#D9DEE4",
+    "control-line": "#7E8A96",
+    "accent": "#245CC0",
+    "accent-soft": "#E7EFFC",
+    "on-accent": "#FFFFFF",
+    "warning": "#795600",
+    "warning-soft": "#FFF5D9",
+    "danger": "#B3261E",
+    "danger-soft": "#FDE9E7",
+    "success": "#27613C",
+    "success-soft": "#E9F4EA",
+    "accent-hover": "#174BA8",
+    "accent-pressed": "#123A82",
+    "surface-top": "#FFFFFF",
+    "surface-bottom": "#FFFFFF",
+    "raised-top": "#ECEFF2",
+    "raised-bottom": "#ECEFF2",
+    "edge-highlight": "#FFFFFF00",
+    "route": "#2463D9"
+  },
+  "font": {
+    "family": "Instrument Sans",
+    "weights": [
+      400,
+      500
+    ],
+    "sizes": {
+      "caption": 18,
+      "support": 20,
+      "body": 24,
+      "title": 32,
+      "heading": 40,
+      "metric": 64
+    },
+    "note": "Existing locally licensed Instrument Sans as a neutral substitute; not the Polestar typeface."
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "radius": {
+    "small": 6,
+    "control": 10,
+    "card": 16,
+    "pill": 999
+  },
+  "geometry": {
+    "status": [
+      448,
+      48
+    ],
+    "maneuver": [
+      448,
+      232
+    ],
+    "media": [
+      448,
+      296
+    ],
+    "mapHeader": [
+      824,
+      48
+    ],
+    "map": [
+      824,
+      544
+    ],
+    "panelHeader": [
+      448,
+      48
+    ],
+    "taskPanel": [
+      448,
+      544
+    ],
+    "climate": [
+      448,
+      64
+    ],
+    "navigation": [
+      88,
+      544
+    ],
+    "comfort": [
+      448,
+      64
+    ],
+    "homeWidget": [
+      448,
+      544
+    ],
+    "navigationGuidance": [
+      448,
+      104
+    ],
+    "routeSummary": [
+      568,
+      88
+    ],
+    "compactMedia": [
+      448,
+      256
+    ],
+    "compactPhone": [
+      448,
+      256
+    ]
+  },
+  "controls": {
+    "buttonHeight": 56,
+    "iconButton": [
+      56,
+      56
+    ],
+    "playback": [
+      64,
+      64
+    ],
+    "iconViewBox": 24,
+    "iconStroke": 1.75
+  },
+  "reference": "https://www.tesla.com/ownersmanual/model3/en_ie/GUID-518C51C1-E9AC-4A68-AE12-07F4FF8C881E.html",
+  "note": "Independent interpretation of Tesla light-display imagery: pale surfaces and cartography, dark typography, restrained controls. Layout, font and exact values are ours. No Tesla assets or driving visualization are used.",
+  "material": {
+    "card": "var(--surface)",
+    "control": "var(--raised)"
+  },
+  "hmi": {
+    "primaryInformation": "24–64 px depending on role",
+    "supportingInformation": "18–20 px; no tiny uppercase tracking",
+    "controls": "56 px standard, 64 px playback; constrained 48 px task header",
+    "stateCues": "Labels, icons, fill and outline; no dependence on hue",
+    "availability": "Driving and parked availability are explicit; right-side placement does not identify a passenger",
+    "geometry": "Identical component bounds across both profiles; no scaling",
+    "scope": "Prototype pixel roles, not validated physical target sizes or automotive compliance"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "result": "PASS",
+  "records": [
+    {
+      "width": 1920,
+      "destination": "harbor",
+      "overlaps": false,
+      "overflow": false,
+      "paths": 1,
+      "trip": [
+        400,
+        80
+      ],
+      "destinationPins": 0,
+      "left": false
+    },
+    {
+      "width": 1920,
+      "destination": "park",
+      "overlaps": false,
+      "overflow": false,
+      "paths": 1,
+      "trip": [
+        400,
+        80
+      ],
+      "destinationPins": 0,
+      "left": true
+    },
+    {
+      "width": 1920,
+      "destination": "cedar",
+      "overlaps": false,
+      "overflow": false,
+      "paths": 1,
+      "trip": [
+        400,
+        80
+      ],
+      "destinationPins": 0,
+      "left": false
+    },
+    {
+      "width": 2880,
+      "destination": "harbor",
+      "overlaps": false,
+      "overflow": false,
+      "paths": 1,
+      "trip": [
+        400,
+        80
+      ],
+      "destinationPins": 0,
+      "left": false
+    },
+    {
+      "width": 2880,
+      "destination": "park",
+      "overlaps": false,
+      "overflow": false,
+      "paths": 1,
+      "trip": [
+        400,
+        80
+      ],
+      "destinationPins": 0,
+      "left": true
+    },
+    {
+      "width": 2880,
+      "destination": "cedar",
+      "overlaps": false,
+      "overflow": false,
+      "paths": 1,
+      "trip": [
+        400,
+        80
+      ],
+      "destinationPins": 0,
+      "left": false
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,56 @@
+{
+  "result": "PASS",
+  "records": [
+    {
+      "width": 1920,
+      "rail": [
+        88,
+        544
+      ],
+      "entry": [
+        72,
+        112
+      ],
+      "panel": [
+        448,
+        544
+      ],
+      "map": [
+        824,
+        544
+      ],
+      "overflow": false
+    },
+    {
+      "width": 2880,
+      "rail": [
+        88,
+        544
+      ],
+      "entry": [
+        72,
+        112
+      ],
+      "panel": [
+        448,
+        544
+      ],
+      "map": [
+        824,
+        544
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Rail and panel invariant",
+    "Temperature updates persistent rail",
+    "Manual fan and airflow",
+    "Defrost and Auto states",
+    "Close restores focus",
+    "Climate persists across widths",
+    "No panel overflow",
+    "Temperature limits"
+  ]
+}

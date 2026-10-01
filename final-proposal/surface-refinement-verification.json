@@ -1,0 +1,78 @@
+{
+  "result": "PASS",
+  "records": [
+    {
+      "width": 1920,
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ]
+      ],
+      "top": 104,
+      "visible": 2,
+      "rail": [
+        88,
+        544
+      ]
+    },
+    {
+      "width": 2880,
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ],
+        [
+          448,
+          544
+        ]
+      ],
+      "top": 104,
+      "visible": 4,
+      "rail": [
+        88,
+        544
+      ]
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Fixed map, rail, card and detail dimensions",
+    "Two versus four visible cards",
+    "Detail/source retention",
+    "Aligned detail panels",
+    "No overflowing detail controls",
+    "Media and call previews",
+    "Climate state changes",
+    "Escape dismisses details"
+  ]
+}

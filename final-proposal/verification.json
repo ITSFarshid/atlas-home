@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "date": "2026-09-27",
+  "featureParity": true,
+  "checks": [
+    "Same four fixed widgets and actions at both widths",
+    "16 route/stop/connection/profile configurations",
+    "14 fixed detail views fit",
+    "Map and climate usable while detail panel open",
+    "Rail Media shortcut works",
+    "Saved destination updates map, ETA and Journey",
+    "Clear and delayed traffic states",
+    "Stop and width persistence",
+    "Escape recovery",
+    "Scaled detail and climate interaction"
+  ],
+  "errors": []
+}

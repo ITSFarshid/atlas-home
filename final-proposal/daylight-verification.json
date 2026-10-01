@@ -1,0 +1,61 @@
+{
+  "result": "PASS",
+  "records": [
+    {
+      "width": 1920,
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "type": "media",
+          "w": 448,
+          "h": 256
+        },
+        {
+          "type": "phone",
+          "w": 448,
+          "h": 256
+        },
+        {
+          "type": "journey",
+          "w": 448,
+          "h": 544
+        }
+      ],
+      "overflow": []
+    },
+    {
+      "width": 2880,
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "type": "media",
+          "w": 448,
+          "h": 256
+        },
+        {
+          "type": "phone",
+          "w": 448,
+          "h": 256
+        },
+        {
+          "type": "journey",
+          "w": 448,
+          "h": 544
+        },
+        {
+          "type": "places",
+          "w": 448,
+          "h": 544
+        }
+      ],
+      "overflow": []
+    }
+  ],
+  "errors": []
+}

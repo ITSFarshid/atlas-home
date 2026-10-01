@@ -1,0 +1,94 @@
+.home-widget.retained-source{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent-soft)}
+.presenter{padding:16px 24px;gap:16px}.presenter nav{gap:12px}.presenter .edition{letter-spacing:.5px}#placement-note{max-width:750px}.presenter-note{line-height:1.5}
+
+/* Persistent clock and single-zone climate controls. */
+.map-heading{justify-content:flex-start;gap:32px;padding:0}
+.system-clock{display:flex;align-items:center;width:208px;height:48px;flex:0 0 208px;border-right:1px solid var(--control-line);font-size:42px;line-height:1;font-weight:500;letter-spacing:-1px;font-variant-numeric:tabular-nums;color:var(--text)}
+.map-heading .destination-title{font-size:24px;color:var(--secondary)}
+/* Single-zone climate entry belongs to vehicle controls, below app navigation. */
+.rail-shell{width:88px;height:544px;background:#171A1D;border:1px solid var(--line);border-radius:44px;overflow:hidden}
+.atlas .rail-shell .a-nav{width:86px;height:388px;padding:12px 6px;gap:4px;border:0;border-radius:0;background:transparent}
+.rail-climate{margin:8px 7px 0;padding-top:12px;border-top:1px solid var(--control-line)}
+.screen .climate-entry{width:72px;height:112px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:4px 0;border-radius:22px}
+.climate-entry .climate-label{font-size:15px;color:var(--secondary)}.climate-entry strong{font-size:26px;font-weight:500;font-variant-numeric:tabular-nums}.climate-entry .climate-mode{font-size:15px;color:var(--secondary)}
+.screen .climate-entry[aria-expanded=true]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.cabin-temperature{display:flex;justify-content:space-between;align-items:center;margin:26px 0 30px;height:88px;gap:12px}
+.screen .cabin-temperature button{width:64px;height:64px;border:1px solid var(--control-line);border-radius:50%;font-size:36px;flex-shrink:0}.screen .cabin-temperature button:disabled{opacity:.3}
+.cabin-temperature output{font-size:56px;letter-spacing:-2px;font-variant-numeric:tabular-nums;white-space:nowrap}.cabin-temperature small{font-size:24px;letter-spacing:0;margin-left:4px;color:var(--secondary)}
+.screen .climate-settings button{height:96px;font-size:20px;gap:8px}.climate-settings strong{font-weight:500}.climate-settings span{font-size:18px}.screen .climate-settings .on{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* Refined surface hierarchy. All dimensions below are identical at both widths. */
+.screen.atlas{--canvas:#0C0E10;--surface:#1A1D20;--raised:#2A2E32;--hover:#343A40;--text:#F4F5F6;--secondary:#B6BCC2;--disabled:#737B83;--line:#FFFFFF0D;--control-line:#485057;--surface-top:#202428;--surface-bottom:#181B1E;--material-card:linear-gradient(155deg,var(--surface-top),var(--surface-bottom));--material-control:var(--raised);--radius-card:24px;--radius-control:14px;--map:#202528;--water:#101C22;--park:#27352F;--road:#555E63;--minor:#343D42;background:var(--canvas)}
+.screen .panel{border-color:#FFFFFF08;box-shadow:inset 0 1px 0 #FFFFFF05;background:var(--material-card)}
+.screen .icon{stroke-width:1.8}
+.screen h2{font-weight:550;letter-spacing:-.7px}
+.map-heading{gap:24px}.system-clock{width:128px;flex-basis:128px;font-size:34px;font-weight:600;letter-spacing:-.8px;border-right:0}.map-heading .destination-title{font-size:20px;font-weight:400;color:var(--secondary);letter-spacing:0}
+.collection-title{font-size:22px;font-weight:500;padding:0 0 0 4px;color:var(--secondary)}
+.screen .collection-controls button:not(:disabled){background:var(--raised);border-color:transparent;color:var(--text)}
+.screen .collection-controls button:hover:not(:disabled){background:var(--hover)}
+#collection-count i.active{background:var(--text)}
+.widget-strip,.detail-panel{top:104px}
+.rail-shell{border:0;border-radius:24px;background:#191D20}
+.atlas .rail-shell .a-nav{width:88px;padding:12px 8px;box-shadow:none}
+.atlas .rail-shell .a-nav button{font-size:15px;font-weight:500;border-radius:16px}
+.atlas .rail-shell .a-nav button[aria-current=page]{background:#25333B;color:var(--accent)}
+.atlas .rail-shell .a-nav button[aria-current=page]:before{display:none}
+.rail-climate{border-color:#FFFFFF14}.screen .climate-entry{border-radius:16px}
+.climate-entry strong{font-weight:600}.climate-entry .climate-label,.climate-entry .climate-mode{font-size:14px}
+.map{border-color:transparent;box-shadow:inset 0 1px 0 #FFFFFF05}
+.cartography .minor{stroke:var(--minor);stroke-width:2;stroke-linejoin:round}
+.cartography .road-edge{stroke:#141B1F;stroke-width:12;stroke-linecap:round}
+.cartography .roads{stroke:var(--road);stroke-width:6;stroke-linecap:round}
+.cartography .shoreline{fill:none;stroke:#314149;stroke-width:2}
+.cartography text{font-size:16px;font-weight:450;fill:#9BA6AE;stroke:var(--map);stroke-width:5}
+.cartography .district{font-size:20px;letter-spacing:.4px;fill:#C3CCD1;font-weight:500}
+.cartography .water-label{font-size:12px;letter-spacing:2px;fill:#708F9E;stroke:var(--water)}
+.cartography .route-casing{stroke:#103F53;stroke-width:13}
+.cartography .route-line{stroke-width:6}
+.destination-halo{fill:#102831;stroke:#7BD9F7;stroke-width:2}.destination-dot{fill:var(--accent)}
+.location-halo{fill:#47C4F31C}.location-disc{fill:#F4F5F6;stroke:#152A34;stroke-width:3}
+.map-guidance{width:416px;height:96px;padding:16px 24px;gap:20px;border:0;border-radius:18px;background:#171C20;box-shadow:0 6px 20px #00000026}
+.screen .map-guidance>.icon{width:48px;height:48px;color:var(--accent)}
+.map-guidance strong{font-size:42px;font-weight:600;letter-spacing:-1px}.map-guidance small{font-size:24px}.map-guidance span{font-size:20px;margin-top:2px}
+.map-trip{border:0;border-radius:18px;background:#171C20;box-shadow:0 6px 20px #00000026}
+.map-trip strong{font-size:28px;font-weight:600}.map-trip span{margin-top:4px}
+.screen .map-trip .small-action{border:0;border-radius:12px;background:#293238;color:var(--text);font-size:20px}
+.screen .map-search,.screen .map-tools button{background:#171C20;border:0;box-shadow:0 3px 12px #00000020}
+.widget-heading{font-size:18px;font-weight:500;color:var(--secondary)}
+.widget-heading>.icon{width:22px;height:22px}
+.widget-foot{left:28px;right:28px;bottom:24px;height:56px;padding:0}
+.screen .widget-link{border:0;border-radius:12px;background:#2B3035;font-size:19px;font-weight:500;padding:0 18px;color:var(--text)}
+.screen .widget-link:hover{background:var(--hover)}
+.screen .widget-media{background:#171A1E}
+.ribbon-media-art{bottom:128px;overflow:hidden}
+.ribbon-media-art .cover{filter:brightness(.9) saturate(.65);object-position:66% 34%}
+.widget-media:after{background:linear-gradient(180deg,#11161955 0%,#11161900 22%,#171A1E55 44%,#171A1EF5 68%,#171A1E 82%)}
+.widget-media .widget-heading{color:#F4F5F6;text-shadow:0 1px 6px #00000090}
+.ribbon-track{top:272px;left:28px;right:28px}.ribbon-track h2{font-size:36px;font-weight:550;line-height:1.15;margin:0 0 8px}.ribbon-track p{font-size:20px;color:#BEC5CB}
+.ribbon-playback{bottom:102px;justify-content:center;gap:32px;align-items:center}
+.screen .ribbon-playback button{width:56px;height:56px;background:transparent}
+.screen .ribbon-playback button.primary{width:64px;height:64px;background:var(--text);color:#101417}
+.widget-media .widget-link{background:#2B3035;border:0}
+.phone-summary{margin-top:24px;font-size:17px;color:var(--secondary);display:flex;gap:8px;align-items:center}
+.connection-dot{height:6px;width:6px;border-radius:50%;background:var(--disabled);flex:none}.connection-dot.is-connected{background:#C4D8CB}
+.home-widget .phone-title{margin:32px 0 0;font-size:32px;font-weight:550}.phone-sub{font-size:18px;margin-top:12px}
+.widget-phone .contact-grid{margin-top:24px;gap:14px}
+.screen .widget-phone .contact-grid button{height:88px;border:0;border-radius:16px;background:#2A2F34;font-size:23px;font-weight:500;padding:0 18px;gap:18px}
+.screen .widget-phone .contact-grid button:hover{background:var(--hover)}
+.widget-phone .contact-initial{width:52px;height:52px;background:#414951;color:#F4F5F6;font-size:22px;font-weight:500}
+.widget-phone .contact-grid button:nth-child(2) .contact-initial{background:#4A4643}
+.screen .widget-phone .contact-grid button>.icon{color:#D1D7DC;width:24px;height:24px}
+.journey-destination h2{font-weight:550;font-size:32px}.journey-next{border-top-color:#FFFFFF13;margin-top:24px;padding-top:22px}
+.journey-next h3{font-size:34px;font-weight:550;letter-spacing:-.7px;margin:4px 0 8px}
+.screen .journey-impact{border:0;border-radius:16px;background:#302B20;top:364px;height:80px}.journey-impact strong{font-weight:500}.journey-impact small{font-size:16px;color:#C6C0AF}
+.screen .journey-impact.is-clear{background:#23302A}
+.saved-home-list .row-art{background:#2C3238;border-radius:12px;color:var(--secondary)}
+.saved-home-list .list-row{border-bottom-color:#FFFFFF12}.saved-home-list .row-body strong{font-size:23px;font-weight:500}
+.places-title{font-weight:550!important}.places-availability{font-size:17px}
+.screen .detail-panel{background:linear-gradient(150deg,#2A3035,#22272C);border-color:#FFFFFF14;box-shadow:0 8px 24px #00000022}
+.screen .detail-panel h2{font-weight:550}.screen .detail-close{background:#3B4249;border:0}
+.screen .detail-panel .small-action,.screen .detail-panel .tool-grid button{border:0;border-radius:14px;background:#373E45}
+.screen .detail-panel .panel-foot{border-top-color:#FFFFFF12}
+.screen .detail-panel .tool-grid .on{background:var(--accent-soft);color:var(--accent)}
+.screen .home-widget.retained-source{border-color:#FFFFFF18;box-shadow:inset 0 3px 0 #738F9B}
+.screen .cabin-temperature button{background:#373E45;border:0}

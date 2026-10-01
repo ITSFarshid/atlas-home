@@ -1,0 +1,124 @@
+{
+  "result": "PASS",
+  "font": [
+    {
+      "family": "Instrument Sans",
+      "status": "loaded"
+    }
+  ],
+  "componentBounds": [
+    {
+      "class": "a-card a-media",
+      "w": 448,
+      "h": 296,
+      "overflow": false
+    },
+    {
+      "class": "a-tabs",
+      "w": 448,
+      "h": 48,
+      "overflow": false
+    },
+    {
+      "class": "a-card a-maneuver",
+      "w": 448,
+      "h": 232,
+      "overflow": false
+    },
+    {
+      "class": "a-card a-media",
+      "w": 448,
+      "h": 296,
+      "overflow": false
+    },
+    {
+      "class": "a-card a-journey",
+      "w": 448,
+      "h": 544,
+      "overflow": false
+    },
+    {
+      "class": "a-climate",
+      "w": 448,
+      "h": 64,
+      "overflow": false
+    }
+  ],
+  "contrastPairs": [
+    {
+      "foreground": "text",
+      "background": "surface-top",
+      "ratio": 12.11
+    },
+    {
+      "foreground": "secondary",
+      "background": "surface-top",
+      "ratio": 6.87
+    },
+    {
+      "foreground": "text",
+      "background": "raised-top",
+      "ratio": 10.76
+    },
+    {
+      "foreground": "secondary",
+      "background": "raised-top",
+      "ratio": 6.11
+    },
+    {
+      "foreground": "text",
+      "background": "surface",
+      "ratio": 16.13
+    },
+    {
+      "foreground": "secondary",
+      "background": "surface",
+      "ratio": 9.16
+    },
+    {
+      "foreground": "text",
+      "background": "raised",
+      "ratio": 14.24
+    },
+    {
+      "foreground": "secondary",
+      "background": "raised",
+      "ratio": 8.09
+    },
+    {
+      "foreground": "on-accent",
+      "background": "accent",
+      "ratio": 16.28
+    },
+    {
+      "foreground": "accent",
+      "background": "accent-soft",
+      "ratio": 12.2
+    },
+    {
+      "foreground": "warning",
+      "background": "warning-soft",
+      "ratio": 11.55
+    },
+    {
+      "foreground": "success",
+      "background": "success-soft",
+      "ratio": 9.91
+    },
+    {
+      "foreground": "danger",
+      "background": "danger-soft",
+      "ratio": 12.63
+    }
+  ],
+  "checks": [
+    "Component dimensions and content fit",
+    "Playback and shared state",
+    "Keyboard tabs",
+    "Switch and list states",
+    "Temperature control",
+    "Narrow document viewport",
+    "No runtime errors"
+  ],
+  "limits": "Screen-colour contrast only. No physical legibility, driving-distraction, vehicle or compliance validation."
+}

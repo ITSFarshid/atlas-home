@@ -1,0 +1,992 @@
+{
+  "result": "PASS",
+  "checks": [
+    "16 matched A/B scenario snapshots",
+    "Pixel-invariant map/cards/details",
+    "Source retained on wide and replaced on narrow",
+    "Shared queue/player state",
+    "Usable climate with details",
+    "Escape recovery",
+    "Task/state survives display change",
+    "Fit preview at 1366×768"
+  ],
+  "errors": [],
+  "records": [
+    {
+      "variant": "prototype",
+      "width": 1920,
+      "scenario": "home",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": null,
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": null
+    },
+    {
+      "variant": "prototype",
+      "width": 1920,
+      "scenario": "queue",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "queue",
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": {
+        "x": 976,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "prototype",
+      "width": 1920,
+      "scenario": "journey",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 2,
+        "active": "home",
+        "detail": "journey",
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 976,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "prototype",
+      "width": 1920,
+      "scenario": "device",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "device",
+        "detailSlot": 1,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": {
+        "x": 1456,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "prototype",
+      "width": 2880,
+      "scenario": "home",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": null,
+        "detailSlot": 1,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": null
+    },
+    {
+      "variant": "prototype",
+      "width": 2880,
+      "scenario": "queue",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "queue",
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 976,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "prototype",
+      "width": 2880,
+      "scenario": "journey",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 2,
+        "active": "home",
+        "detail": "journey",
+        "detailSlot": 2,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 1936,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "prototype",
+      "width": 2880,
+      "scenario": "device",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "device",
+        "detailSlot": 1,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya",
+        "detailSource": null
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 1456,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "challenger",
+      "width": 1920,
+      "scenario": "home",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": null,
+        "detailSource": null,
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": null
+    },
+    {
+      "variant": "challenger",
+      "width": 1920,
+      "scenario": "queue",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "queue",
+        "detailSource": "media",
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": {
+        "x": 976,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "challenger",
+      "width": 1920,
+      "scenario": "journey",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 2,
+        "active": "home",
+        "detail": "journey",
+        "detailSource": "journey",
+        "detailSlot": 0,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 976,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "challenger",
+      "width": 1920,
+      "scenario": "device",
+      "state": {
+        "width": 1920,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "device",
+        "detailSource": "phone",
+        "detailSlot": 1,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": {
+        "x": 1456,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "challenger",
+      "width": 2880,
+      "scenario": "home",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": null,
+        "detailSource": null,
+        "detailSlot": 1,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": null
+    },
+    {
+      "variant": "challenger",
+      "width": 2880,
+      "scenario": "queue",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "queue",
+        "detailSource": "media",
+        "detailSlot": 2,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 1936,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "challenger",
+      "width": 2880,
+      "scenario": "journey",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 2,
+        "active": "home",
+        "detail": "journey",
+        "detailSource": "journey",
+        "detailSlot": 3,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        }
+      ],
+      "detail": {
+        "x": 2416,
+        "w": 448,
+        "h": 544
+      }
+    },
+    {
+      "variant": "challenger",
+      "width": 2880,
+      "scenario": "device",
+      "state": {
+        "width": 2880,
+        "theme": "monochrome",
+        "moving": false,
+        "route": true,
+        "destination": "harbor",
+        "stop": false,
+        "playing": true,
+        "track": 0,
+        "compactIndex": 0,
+        "active": "home",
+        "detail": "device",
+        "detailSource": "phone",
+        "detailSlot": 2,
+        "driver": 21,
+        "passenger": 21,
+        "fan": 2,
+        "defrost": false,
+        "connected": true,
+        "call": false,
+        "caller": "Maya"
+      },
+      "map": [
+        824,
+        544
+      ],
+      "cards": [
+        {
+          "name": "media",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "phone",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        },
+        {
+          "name": "journey",
+          "w": 448,
+          "h": 544,
+          "inert": true
+        },
+        {
+          "name": "places",
+          "w": 448,
+          "h": 544,
+          "inert": false
+        }
+      ],
+      "detail": {
+        "x": 1936,
+        "w": 448,
+        "h": 544
+      }
+    }
+  ]
+}
